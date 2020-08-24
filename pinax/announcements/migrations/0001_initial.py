@@ -30,6 +30,8 @@ class Migration(migrations.Migration):
                 ('publish_start', models.DateTimeField(default=django.utils.timezone.now, verbose_name='publish_start')),
                 ('publish_end', models.DateTimeField(blank=True, null=True, verbose_name='publish_end')),
                 ('creator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='creator')),
+                ('color', models.CharField(max_length=7, null=True, blank=True, verbose_name='background Color')),
+                ('image', models.ImageField(null=True, blank=True, upload_to='', verbose_name='image')),
             ],
             options={
                 'verbose_name': 'announcement',
