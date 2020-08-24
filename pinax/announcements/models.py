@@ -32,6 +32,8 @@ class Announcement(models.Model):
     dismissal_type = models.IntegerField(choices=DISMISSAL_CHOICES, default=DISMISSAL_SESSION)
     publish_start = models.DateTimeField(_("publish_start"), default=timezone.now)
     publish_end = models.DateTimeField(_("publish_end"), blank=True, null=True)
+    color = models.CharField(_("background Color"), max_length=7, null=True, blank=True)
+    image = model.ImageField(_('image'), null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse("pinax_announcements:announcement_detail", args=[self.pk])
