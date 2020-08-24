@@ -34,6 +34,7 @@ class Announcement(models.Model):
     publish_end = models.DateTimeField(_("publish_end"), blank=True, null=True)
     color = models.CharField(_("background Color"), max_length=7, null=True, blank=True)
     image = models.ImageField(_('image'), null=True, blank=True)
+    call_to_action = models.URLField(_('call To Action'), max_length=200, null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse("pinax_announcements:announcement_detail", args=[self.pk])

@@ -11,7 +11,7 @@ class AnnouncementAdmin(admin.ModelAdmin):
         (None, {
             "fields": [
                 "title", "content", "site_wide", "members_only", "publish_start", "publish_end",
-                "dismissal_type"],
+                "dismissal_type", "color", "image", "call_to_action"],
         }),
     ]
 

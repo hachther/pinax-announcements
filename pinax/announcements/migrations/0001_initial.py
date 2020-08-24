@@ -32,6 +32,7 @@ class Migration(migrations.Migration):
                 ('creator', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='creator')),
                 ('color', models.CharField(max_length=7, null=True, blank=True, verbose_name='background Color')),
                 ('image', models.ImageField(null=True, blank=True, upload_to='', verbose_name='image')),
+                ('call_to_action', models.URLField(max_length=200, blank=True, null=True, verbose_name='call To Action')),
             ],
             options={
                 'verbose_name': 'announcement',
